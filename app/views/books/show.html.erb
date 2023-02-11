@@ -2,14 +2,22 @@
   <%= flash[:notice] %>
 </div>
 
-<h2>タイトル</h2>
-<p><%= @book.title %></p>
+<div class=show_contents>
+   <span><b>Title:</b></span>
+   <span><%= @book.title %></span>
+</div>
 
-<h2>本文</h2>
-<p><%= @book.body %></p>
+<div class=show_contents>
+   <span><b>Body:</b></span>
+   <span><%= @book.body %></span>
+</div>
 
-<!--編集-->
-<%= link_to "Edit", edit_book_path(@book.id) %>
+<div class=link>
+ <!--編集-->
+   <%= link_to "Edit", edit_book_path(@book.id) %>
 
-<!--indexに戻る-->
-<a href="/books">Back</a>
+   |
+
+ <!--indexに戻る-->
+   <a href="/books">Back</a>
+</div>
